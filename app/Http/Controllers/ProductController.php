@@ -98,7 +98,7 @@ class ProductController extends Controller
       $product->update($request->all());
 
       return response([
-          'data' => new ProductResource($product)      
+        'data' => new ProductResource($product)      
       ], Response::HTTP_CREATED);
 		}
 

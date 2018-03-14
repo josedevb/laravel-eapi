@@ -9,8 +9,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Review extends Model
 {
-    public function product()
-    {
-        return $this->belongsTo(Product::class);
-    }
+  protected $fillable = [
+    'star','customer','review'
+  ];
+
+  public function product()
+  {
+      return $this->belongsTo(Product::class);
+  }
 }
